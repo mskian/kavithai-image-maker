@@ -16,6 +16,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link href="/css/custom.css" rel="stylesheet" />
 
+<script>
+function countChars(obj){
+    var maxLength = 200;
+    var strLength = obj.value.length;
+    var charRemain = (maxLength - strLength);
+    
+    if(charRemain < 0){
+        document.getElementById("charNum").innerHTML = '<span style="color: red;">You have exceeded the limit of '+maxLength+' characters</span>';
+    }else{
+        document.getElementById("charNum").innerHTML = charRemain+' characters remaining';
+    }
+}
+</script>
+
 </head>
 <body>
 
@@ -34,7 +48,9 @@
 <p class="field">
 <div class="control">
 <label class="label has-text-centered has-text-weight-medium" for="Description">Add kavithai (Maxmium Text Length Support 200)</label>
-<textarea class="textarea textbox is-info column" type="text" rows="15" name="kavithai" id="kavithai" autocomplete="off" maxlength="200" required></textarea>
+<textarea class="textarea textbox is-info column" type="text" rows="15" name="kavithai" id="kavithai" autocomplete="off" maxlength="200" onkeyup="countChars(this);" required></textarea>
+<br>
+<p id="charNum">200 characters remaining</p>
 </div>
 </p>
 <input type="hidden" name="_csrf" value="{{ post.csrfToken }}">
