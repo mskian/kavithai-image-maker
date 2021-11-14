@@ -1,6 +1,6 @@
 {
     "name": "kavithai-image-maker",
-    "description": "Convert HTML to image with fully Desgined for Tamil kavithai image.",
+    "description": "Convert HTML to image with fully Designed for Tamil kavithai image.",
     "repository": "https://github.com/mskian/kavithai-image-maker",
     "keywords": ["node", "express", "static"]
 }
