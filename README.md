@@ -10,7 +10,7 @@ Just Fork and Download this Repo & modify the Content/design According to your N
 
 ## Developent
 
-- Download or Repo
+- Download or Clone the Repo
 
 ```sh
 git clone https://github.com/mskian/kavithai-image-maker.git
