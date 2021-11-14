@@ -36,7 +36,7 @@ app.get('/', csrfProtection, function(req, res) {
   res.header('X-Content-Type-Options', 'nosniff');
   res.header('Strict-Transport-Security', 'max-age=63072000');
 
-  const current_page = 'http://' + req.headers.host + req.url;
+  const current_page = 'https://' + req.headers.host + req.url;
 
   res.render('home', {
       post: {
