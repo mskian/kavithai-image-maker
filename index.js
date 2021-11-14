@@ -55,6 +55,6 @@ app.post('/kavithai', async function(req, res) {
 app.use('/', function(req, res) {
     res.status(404).json({
         error: 1,
-        message: 'App Error'
+        message: 'Web App Error'
     });
 });
