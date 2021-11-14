@@ -10,7 +10,7 @@
     background-color: rgba(191, 18, 253, 0.5);
   }
   body {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Hind Madurai', sans-serif;
     font-size: 16px;
     background-color: #ffffff;
     color: rgba(0, 0, 0, 0.6);
@@ -165,14 +165,14 @@ pre code {
         padding-bottom: 50px;
 }
 .user-form {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Hind Madurai', sans-serif;
   }
 .user-form p {
     letter-spacing: .03em;
     line-height: 20px;
     margin-bottom: 20px;
     word-wrap: break-word;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Hind Madurai', sans-serif;
     font-size: 16px;
     color: #221f1f;
     -moz-osx-font-smoothing: grayscale;
@@ -183,7 +183,7 @@ pre code {
 .user-form button {
     display: flex;
     flex-grow: 0.3;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Hind Madurai', sans-serif;
     font-weight: 500;
     font-size: 14px;
     text-transform: uppercase;
@@ -197,7 +197,7 @@ pre code {
 .user-form input {
     display: flex;
     flex-grow: 0.3;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Hind Madurai', sans-serif;
     font-weight: 500;
     font-size: 14px;
     border-radius: 32px;
@@ -210,7 +210,7 @@ pre code {
 .textbox {
     display: flex;
     flex-grow: 0.3;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Hind Madurai', sans-serif;
     font-weight: 500;
     font-size: 14px;
     border-radius: 32px;
@@ -222,7 +222,8 @@ pre code {
 }
 blockquote {
     letter-spacing: .03em;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Hind Madurai', sans-serif;
+    font-weight: 500;
     -moz-osx-font-smoothing: grayscale;
    -webkit-font-smoothing: antialiased !important;
    -moz-font-smoothing: antialiased !important;

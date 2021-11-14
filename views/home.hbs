@@ -5,12 +5,15 @@
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='icon' type='image/png' href='/Icon-48.png'>
 
 <title>{{post.title}}</title>
 <meta name="description" content="{{post.description}}" />
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" integrity="sha512-IgmDkwzs96t4SrChW29No3NXBIBv8baW490zk5aXvhCD8vuZM3yUSkbyTBcXohkySecyzIrUwiF/qV0cuPcL3Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link href="/css/custom.css" rel="stylesheet" />
 
 </head>
@@ -23,15 +26,15 @@
 <div class="card-content content user-form login">
 <h1 class="title has-text-centered">{{post.title}}</h1>
 <blockquote class="notification is-link">
-<small>Enter Your Kavithai and  Click <b>Create image</b> to Send the Data's to API Server and Generate image with Kavithai.</small>
+<small>Enter Your Kavithai and  Click <b>Create image</b> to Send the Data's to API Server it will Generate image with Kavithai.</small>
 </blockquote>
 
 <form target="_blank" action="/kavithai" method="post" role="form" enctype="application/x-www-form-urlencoded">
 
 <p class="field">
 <div class="control">
-<label class="label has-text-centered has-text-weight-medium" for="Description">Add kavithai</label>
-<textarea class="textarea textbox is-info column" type="text" rows="10" name="kavithai" id="kavithai" autocomplete="off" required></textarea>
+<label class="label has-text-centered has-text-weight-medium" for="Description">Add kavithai (Maxmium Text Length Support 200)</label>
+<textarea class="textarea textbox is-info column" type="text" rows="15" name="kavithai" id="kavithai" autocomplete="off" maxlength="200" required></textarea>
 </div>
 </p>
 

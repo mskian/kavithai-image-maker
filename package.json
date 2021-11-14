@@ -3,10 +3,10 @@
   "version": "0.0.1",
   "description": "Convert HTML to image with fully Desgined for Tamil kavithai image.",
   "main": "index.js",
-    "scripts": {
-      "test": "node test.js",
-      "start": "node index.js",
-      "dev": "nodemon index.js"
+  "scripts": {
+    "test": "node test.js",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",

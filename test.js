@@ -1,5 +1,12 @@
 const nodeHtmlToImage = require('node-html-to-image');
 
+
+function random_item(items) {
+  return items[Math.floor(Math.random() * items.length)];
+
+}
+const items = ['#DFE6E9', '#F6E58D', '#DFEBB0', '#FFD08A', '#D9D9D9'];
+
 nodeHtmlToImage({
   output: './image.png',
   puppeteerArgs: { args: ["--no-sandbox"] },
@@ -21,7 +28,7 @@ nodeHtmlToImage({
     body {
       width: 1080px;
       height: 1080px;
-      background-color: #DFE6E9;
+      background-color: ${random_item(items)};
       font-family: 'Baloo Thambi 2', cursive;
       font-weight: 700;
     }
