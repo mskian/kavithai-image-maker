@@ -28,6 +28,8 @@
   },
   "homepage": "https://github.com/mskian/kavithai-image-maker#readme",
   "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "csurf": "^1.11.0",
     "express": "^4.17.1",
     "hbs": "^4.1.2",
     "node-html-to-image": "^3.2.0"

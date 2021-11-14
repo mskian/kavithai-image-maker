@@ -1,6 +1,8 @@
 const express = require('express');
 const nodeHtmlToImage = require('node-html-to-image');
 const path = require('path');
+const csrf = require('csurf');
+const cookieParser = require('cookie-parser');
 
 const app = express();
 const port = process.env.PORT || 3006;
@@ -13,6 +15,10 @@ app.use(express.urlencoded({
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'views'));
+app.use(cookieParser());
+const csrfProtection = csrf({
+    cookie: true
+});
 
 app.listen(port, function() {
     console.log('listening on port ' + port);
@@ -24,7 +30,7 @@ function random_item(items) {
 }
 const items = ['#DFE6E9', '#F6E58D', '#DFEBB0', '#FFD08A', '#D9D9D9'];
 
-app.get('/', function(req, res) {
+app.get('/', csrfProtection, function(req, res) {
   res.header('X-Frame-Options', 'DENY');
   res.header('X-XSS-Protection', '1; mode=block');
   res.header('X-Content-Type-Options', 'nosniff');
@@ -32,12 +38,13 @@ app.get('/', function(req, res) {
   res.render('home', {
       post: {
           title: 'Kavithai image maker',
-          description: 'Just add the Kavithai it will Generate the image with Text you add.'
+          description: 'Just add the Kavithai it will Generate the image with Text you add.',
+          csrfToken: req.csrfToken()
       }
   });
 });
 
-app.post('/kavithai', async function(req, res) {
+app.post('/kavithai', csrfProtection, async function(req, res) {
     res.header('X-Frame-Options', 'DENY');
     res.header('X-XSS-Protection', '1; mode=block');
     res.header('X-Content-Type-Options', 'nosniff');
