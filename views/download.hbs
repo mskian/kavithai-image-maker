@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='icon' type='image/png' href='/Icon-48.png'>
+
+<title>{{post.name}}</title>
+<meta name="description" content="{{post.description}}" />
+<link rel="canonical" href="{{post.seo_url}}" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" integrity="sha512-IgmDkwzs96t4SrChW29No3NXBIBv8baW490zk5aXvhCD8vuZM3yUSkbyTBcXohkySecyzIrUwiF/qV0cuPcL3Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="/css/custom.css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="container content">
+<div class="columns is-centered">
+<div class="column is-half">
+<div class="card-content content">
+<P>
+<img src="data:image/jpeg;base64,{{post.base}}" class="img-fluid mx-auto d-block " alt="Happy Diwali 2021" width="650" height="650" loading="lazy" />
+</P>
+<p>
+<a href="data:image/jpeg;base64,{{post.base}}" class="button pwa-button is-warning has-text-dark" download="{{post.title}}.jpeg">🔽 Download image</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>
