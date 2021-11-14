@@ -1,8 +1,32 @@
 # Kavithai image maker
 
-Convert HTML to image with fully Desgined for Tamil kavithai image.
+Convert HTML to image with fully Desgined for Tamil kavithai image.  
 
-Web App Powered by `node-html-to-image` Module  - <https://github.com/frinyvonnick/node-html-to-image>
+Just Fork and Download this Repo & modify the Content/design According to your Needs - **it's for my personal usage**.  
+
+- Web App Powered by `node-html-to-image` Module  - <https://github.com/frinyvonnick/node-html-to-image>  
+
+## Developent
+
+- Download or Repo
+
+```sh
+git clone https://github.com/mskian/kavithai-image-maker.git
+cd kavithai-image-maker
+yarn
+```
+
+- Server Test
+
+```sh
+yarn dev
+```
+
+- image Generatin test
+
+```sh
+yarn test
+```
 
 ## usage
 
@@ -22,6 +46,7 @@ http://localhost:3001/kavithai
 
 - line break <https://github.com/frinyvonnick/node-html-to-image/issues/134>
 - Heroku puppeteer - <https://elements.heroku.com/buildpacks/jontewks/puppeteer-heroku-buildpack>
+- Heroku Emoji Support - <https://github.com/SimonBriche/heroku-buildpack-emoji-support>
 
 ## LICENSE
 
