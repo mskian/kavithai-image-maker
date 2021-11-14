@@ -1,6 +1,6 @@
 # Kavithai image maker
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mskian/kavithai-image-maker)  
+[![Free Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mskian/kavithai-image-maker)  
 
 Convert HTML to image with fully Designed for Tamil kavithai image.  
 
