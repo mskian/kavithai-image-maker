@@ -3,15 +3,15 @@
     height: 8px;
   }
   ::-webkit-scrollbar-thumb {
-    background-color: rgba(45, 59, 255, 0.302);
+    background-color: rgba(187, 253, 167, 0.302);
     border-radius: 8px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(191, 18, 253, 0.5);
+    background-color: rgba(215, 154, 255, 0.5);
   }
   body {
     font-family: 'Hind Madurai', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     background-color: #2c3e50;
     color: rgba(0, 0, 0, 0.6);
     font-weight: 400;
@@ -19,6 +19,7 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: grayscale;
 	overflow-x: hidden;
+    height: 100vh;
   }
 h1{font-weight:500;font-size:23px;}
 h2{font-weight:500;font-size:21px;}
