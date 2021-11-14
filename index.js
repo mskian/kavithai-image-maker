@@ -35,10 +35,14 @@ app.get('/', csrfProtection, function(req, res) {
   res.header('X-XSS-Protection', '1; mode=block');
   res.header('X-Content-Type-Options', 'nosniff');
   res.header('Strict-Transport-Security', 'max-age=63072000');
+
+  const current_page = 'http://' + req.headers.host + req.url;
+
   res.render('home', {
       post: {
           title: 'Kavithai image maker',
           description: 'Just add the Kavithai it will Generate the image with Text you add.',
+          seo_url: current_page,
           csrfToken: req.csrfToken()
       }
   });
