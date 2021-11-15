@@ -43,6 +43,10 @@ app.get('/', csrfProtection, function(req, res) {
             title: 'Tamil Kavithai image Maker',
             description: 'Tamil Kavithai image Maker - Just add your Tamil Kavithai it will Generate the image with the text you add - Free kavithai Maker.',
             seo_url: current_page,
+            facebook: 'https://www.facebook.com/tamilsmsblog',
+            twitter: '@tamilsmsblog',
+            twitteruser: '@tamilsmsblog',
+            og_image: current_page+ 'kavithai-maker.png',
             csrfToken: req.csrfToken()
         }
     });
