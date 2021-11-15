@@ -40,8 +40,8 @@ app.get('/', csrfProtection, function(req, res) {
 
     res.render('home', {
         post: {
-            title: 'Kavithai image maker',
-            description: 'Just add the Kavithai it will Generate the image with Text you add.',
+            title: 'Tamil Kavithai image Maker',
+            description: 'Tamil Kavithai image Maker - Just add your Tamil Kavithai it will Generate the image with the text you add - Free kavithai Maker.',
             seo_url: current_page,
             csrfToken: req.csrfToken()
         }
@@ -73,8 +73,8 @@ app.post('/kavithai', csrfProtection, async function(req, res) {
     const b64 = Buffer.from(image).toString('base64');
     res.render('download', {
         post: {
-            name: 'Download your image',
-            description: 'Tamil SMS Blog - Generate Tamil Kavithai image.',
+            name: 'Download your image - Tamil Kavithai image Maker',
+            description: 'Tamil Kavithai image Maker - Just add your Tamil Kavithai it will Generate the image with the text you add - Free kavithai Maker.',
             base: b64,
             seo_url: current_page,
             title: basename

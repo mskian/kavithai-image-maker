@@ -39,7 +39,12 @@ a:hover, a:focus, a:active {
     color: #010508;
 }
 .content a {
-    color: #ffffff;
+    color: #fcee29;
+    text-decoration: none;
+    border-bottom: #EA215A 0.125em solid;
+}
+.content a:hover, a:focus, a:active {
+    color: #c2fa95;
 }
 .container,
 p,

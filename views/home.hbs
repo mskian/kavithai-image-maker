@@ -17,20 +17,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link href="/css/custom.css" rel="stylesheet" />
 
-<script>
-function countChars(obj){
-    var maxLength = 200;
-    var strLength = obj.value.length;
-    var charRemain = (maxLength - strLength);
-    
-    if(charRemain < 0){
-        document.getElementById("charNum").innerHTML = '<span style="color: red;">You have exceeded the limit of '+maxLength+' characters</span>';
-    }else{
-        document.getElementById("charNum").innerHTML = charRemain+' characters remaining';
-    }
-}
-</script>
-
 </head>
 <body>
 
@@ -48,10 +34,10 @@ function countChars(obj){
 
 <p class="field">
 <div class="control">
-<label class="label has-text-centered has-text-weight-medium" for="Description">Add kavithai (Maxmium Text Length Support 200)</label>
-<textarea class="textarea textbox is-info column" type="text" rows="15" name="kavithai" id="kavithai" autocomplete="off" maxlength="200" onkeyup="countChars(this);" required></textarea>
+<label class="label has-text-centered has-text-weight-medium" for="Description">Add kavithai (Maxmium Text Length Support 235)</label>
+<textarea class="textarea textbox is-info column" type="text" rows="12" name="kavithai" id="kavithai" autocomplete="off" maxlength="235" onkeyup="countChars(this);" required></textarea>
 <br>
-<p id="charNum">200 characters remaining</p>
+<p id="charNum">235 characters remaining</p>
 </div>
 </p>
 <input type="hidden" name="_csrf" value="{{ post.csrfToken }}">
@@ -60,12 +46,41 @@ function countChars(obj){
 </div>
 
 </form>
-
+<br>
+<blockquote class="notification is-danger">
+<div class="tags has-addons is-horizontal-center">
+<span class="tag is-dark">ZERO</span>
+<span class="tag is-link">Logs</span>
 </div>
+<small>Kavithai you Enter in our Website won't be stored in our Server or Database even we won't save the image that generated</small>
+</blockquote>
+</div>
+<br>
+<hr>
+<p class="has-text-light">
+we ❤ Open Source - <a target="_blank" rel="nofollow noreferrer noopener" href="https://github.com/mskian/kavithai-image-maker" title="kavithai image maker" >Source Code</a><br>
+This Project Was Developed and Maintained by the Team tamilsms.blog<br>
+it's Fully Free to use - Zero Ads and Zero Promotions.
+</p>
+<hr>
 </div>
 </div>
 </div>
 </section>
+
+<script>
+function countChars(obj){
+    var maxLength = 235;
+    var strLength = obj.value.length;
+    var charRemain = (maxLength - strLength);
+    
+    if(charRemain < 0){
+        document.getElementById("charNum").innerHTML = '<span style="color: red;">You have exceeded the limit of '+maxLength+' characters</span>';
+    }else{
+        document.getElementById("charNum").innerHTML = charRemain+' characters remaining';
+    }
+}
+</script>
 
 </body>
 </html>
