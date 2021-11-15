@@ -3,6 +3,7 @@ const nodeHtmlToImage = require('node-html-to-image');
 const path = require('path');
 const csrf = require('csurf');
 const cookieParser = require('cookie-parser');
+require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 3006;
@@ -47,6 +48,9 @@ app.get('/', csrfProtection, function(req, res) {
             twitter: '@tamilsmsblog',
             twitteruser: '@tamilsmsblog',
             og_image: current_page+ 'kavithai-maker.png',
+            src_data: process.env.SRC,
+            website_id: process.env.WEBSITEID,
+            data_domain: process.env.DOMAIN,
             csrfToken: req.csrfToken()
         }
     });
