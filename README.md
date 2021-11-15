@@ -15,7 +15,9 @@ we ❤ Open Source
 This Project Was Developed and Maintained by the Team tamilsms.blog
 it's Fully Free to use - Zero Ads and Zero Promotions.  
 
-- Web App Powered by `node-html-to-image` Module  - <https://github.com/frinyvonnick/node-html-to-image>  
+- Web App Powered by `node-html-to-image` Module  - <https://github.com/frinyvonnick/node-html-to-image>
+- Handlebars for Templating
+- Express.js for API Server
 
 ## Developent
 
