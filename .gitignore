@@ -7,6 +7,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .vercel
+/public/sitemap.xml
+/public/robots.txt
 
 # Runtime data
 pids

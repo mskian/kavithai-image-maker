@@ -6,6 +6,7 @@
   "scripts": {
     "test": "node test.js",
     "start": "node index.js",
+    "build": "node sitemap.js && node robots.js",
     "dev": "nodemon index.js"
   },
   "repository": {
@@ -32,10 +33,12 @@
     "csurf": "^1.11.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "express-sitemap-xml": "^3.0.0",
     "hbs": "^4.1.2",
     "node-html-to-image": "^3.2.0"
   },
   "devDependencies": {
+    "generate-robotstxt": "^8.0.3",
     "nodemon": "^2.0.15"
   }
 }
