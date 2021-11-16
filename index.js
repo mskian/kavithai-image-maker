@@ -70,7 +70,7 @@ app.post('/kavithai', csrfProtection, [
     check('kavithai', 'Kavithai Length Must be 50 to 230 characters').isLength({
         min: 50,
         max: 230
-    }),
+    }).not().isEmpty(),
 ], async function(req, res) {
     res.header('X-Frame-Options', 'DENY');
     res.header('X-XSS-Protection', '1; mode=block');
@@ -126,14 +126,6 @@ app.post('/kavithai', csrfProtection, [
         //res.header('Content-Disposition', `attachment; filename="${basename}.jpeg"`)
         //res.send(image);
     }
-});
-
-app.get('/refresh', function(req, res) {
-    res.header('X-Frame-Options', 'DENY');
-    res.header('X-XSS-Protection', '1; mode=block');
-    res.header('X-Content-Type-Options', 'nosniff');
-    res.header('Strict-Transport-Security', 'max-age=63072000');
-    res.status(302).redirect('/');
 });
 
 app.use('/', function(req, res) {

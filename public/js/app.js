@@ -12,8 +12,12 @@ function countChars(obj) {
 
 function store() {
     var inputkavithai = document.getElementById("kavithai");
-    localStorage.setItem("kavithai", inputkavithai.value);
-    console.log('Stored in Local Storage');
+    if (inputkavithai == 0 || inputkavithai == null) {
+        console.log('Empty input');
+    } else {
+        localStorage.setItem("kavithai", inputkavithai.value);
+        console.log('Stored in Local Storage');
+    }
 }
 
 function restoreOptions() {
