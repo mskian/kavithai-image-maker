@@ -48,7 +48,7 @@
 <img src="data:image/jpeg;base64,{{post.base}}" class="img-fluid mx-auto d-block" alt="Happy Diwali 2021" width="650" height="650" loading="lazy" />
 </P>
 <p>
-<a href="data:image/jpeg;base64,{{post.base}}" class="button pwa-button is-warning has-text-dark" download="{{post.title}}.jpeg">🔽 Download image</a>
+<a onclick="BacktoHome();" href="data:image/jpeg;base64,{{post.base}}" class="button pwa-button is-warning has-text-dark" download="{{post.title}}.jpeg">🔽 Download image</a>
 </p>
 <hr>
 <p class="has-text-light">
@@ -61,6 +61,17 @@ it's Fully Free to use - Zero Ads and Zero Promotions.
 </div>
 </div>
 </div>
+
+<script>
+function BacktoHome() {
+    setTimeout(() => {
+        window.close();
+    }, 2000)
+}
+if (window.history.replaceState) {
+    window.history.replaceState(null, null, '/refresh');
+}
+</script>
 
 </body>
 </html>

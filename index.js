@@ -116,7 +116,7 @@ app.post('/kavithai', csrfProtection, [
                 title: basename
             }
         });
-        res.clearCookie('_csrf');
+        //res.clearCookie('_csrf');
         //res.send('<a href=data:'+ mimeType + ';base64,'+ b64 +' download="' + basename +'.jepg">download</a>');
         //res.writeHead(200, { 'Content-Type': 'image/jpeg' });
         //res.end(image, 'binary');
@@ -126,6 +126,14 @@ app.post('/kavithai', csrfProtection, [
         //res.header('Content-Disposition', `attachment; filename="${basename}.jpeg"`)
         //res.send(image);
     }
+});
+
+app.get('/refresh', function(req, res) {
+    res.header('X-Frame-Options', 'DENY');
+    res.header('X-XSS-Protection', '1; mode=block');
+    res.header('X-Content-Type-Options', 'nosniff');
+    res.header('Strict-Transport-Security', 'max-age=63072000');
+    res.status(302).redirect('/');
 });
 
 app.use('/', function(req, res) {

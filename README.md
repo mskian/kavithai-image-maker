@@ -1,4 +1,4 @@
-# Kavithai image maker
+# Kavithai image maker 🦄
 
 ![build-test](https://github.com/mskian/kavithai-image-maker/workflows/build-test/badge.svg)  
 
@@ -15,11 +15,16 @@ we ❤ Open Source
 This Project Was Developed and Maintained by the Team tamilsms.blog
 it's Fully Free to use - Zero Ads and Zero Promotions.  
 
+## Powered by 💚
+
 - Web App Powered by `node-html-to-image` Module  - <https://github.com/frinyvonnick/node-html-to-image>
 - Handlebars for Templating
 - Express.js for API Server
+- `localStorage` to Save user data locally in there Web Browser to prevent the accidental data loss
+- DOMPurify - sanitizer for HTML
+- Bulma CSS Framework  
 
-## Developent
+## Developent 📦
 
 - Download or Clone the Repo
 
@@ -35,13 +40,13 @@ yarn
 yarn dev
 ```
 
-- image Generatin test
+- image Generation test
 
 ```sh
 yarn test
 ```
 
-## usage
+## usage 🗃
 
 - Homepage URL
 
@@ -55,12 +60,12 @@ http://localhost:3006/
 http://localhost:3001/kavithai
 ```
 
-## Reference
+## Reference 📕
 
 - line break <https://github.com/frinyvonnick/node-html-to-image/issues/134>
 - Heroku puppeteer - <https://elements.heroku.com/buildpacks/jontewks/puppeteer-heroku-buildpack>
 - Heroku Emoji Support - <https://github.com/SimonBriche/heroku-buildpack-emoji-support>
 
-## LICENSE
+## LICENSE ☑
 
 MIT
