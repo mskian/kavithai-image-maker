@@ -45,11 +45,17 @@
 <div class="card-content content">
 <blockquote class="notification is-danger">
 <P>{{post.error_name}}</P>
+<button class="button is-warning" onclick="goBack()">Close page</button>
 </blockquote>
 </div>
 </div>
 </div>
 </div>
+<script>
+function goBack() {
+   window.close();
+}
+</script>
 
 </body>
 </html>
