@@ -7,7 +7,8 @@
     "test": "node test.js",
     "start": "node index.js",
     "build": "node sitemap.js && node robots.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "ci": "mocha ./test/* --exit"
   },
   "repository": {
     "type": "git",
@@ -42,6 +43,8 @@
   },
   "devDependencies": {
     "generate-robotstxt": "^8.0.3",
-    "nodemon": "^2.0.15"
+    "mocha": "^9.1.3",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.1.6"
   }
 }
