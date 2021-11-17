@@ -62,6 +62,7 @@ app.get('/', csrfProtection, function(req, res) {
             src_data: process.env.SRC,
             website_id: process.env.WEBSITEID,
             data_domain: process.env.DOMAIN,
+            google: process.env.GOOGLE,
             csrfToken: req.csrfToken()
         }
     });
