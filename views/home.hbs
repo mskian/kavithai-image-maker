@@ -132,6 +132,9 @@
 </div>
 <br>
 <hr>
+<div class="buttons is-centered">
+<button class="button pwa-button is-info" id="installPWA" onclick="installPWA()">🍔 Install App</button>
+</div>
 <p class="has-text-light">
 we ❤ Open Source - <a target="_blank" rel="nofollow noreferrer noopener" href="https://github.com/mskian/kavithai-image-maker" title="kavithai image maker" >Source Code</a><br>
 This Project Was Developed and Maintained by the Team tamilsms.blog<br>
@@ -161,6 +164,44 @@ function init() {
         });
     }
 }
+let pwaInstalled = localStorage.getItem('pwaInstalled') == 'yes'
+if (window.matchMedia('(display-mode: standalone)').matches) {
+    localStorage.setItem('pwaInstalled', 'yes')
+    pwaInstalled = true
+}
+if (window.navigator.standalone === true) {
+    localStorage.setItem('pwaInstalled', 'yes')
+    pwaInstalled = true
+}
+if (pwaInstalled) {
+    document.getElementById('installPWA').style.display = 'none'
+} else {
+    document.getElementById('installPWA').style.display = 'inline-flex'
+}
+let deferredPrompt = null
+window.addEventListener('beforeinstallprompt', (e) => {
+    deferredPrompt = e
+})
+async function installPWA() {
+    if (deferredPrompt) {
+        deferredPrompt.prompt()
+        deferredPrompt.userChoice.then(({
+            outcome
+        }) => {
+            if (outcome === 'accepted') {
+                console.log('Your PWA has been installed')
+            } else {
+                console.log('User choose to not install your PWA')
+            }
+            deferredPrompt = null
+        })
+    }
+}
+window.addEventListener('appinstalled', (evt) => {
+    localStorage.setItem('pwaInstalled', 'yes')
+    pwaInstalled = true
+    document.getElementById('installPWA').style.display = 'none'
+})
 </script>
 
 </body>
