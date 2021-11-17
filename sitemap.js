@@ -13,7 +13,6 @@ const date = mm + '-' + dd + '-' + yyyy;
 async function run() {
     const urls = [{
         url: '/',
-        lastMod: date,
         changeFreq: 'daily'
     }]
     const sitemaps = await buildSitemaps(urls, process.env.URL)
