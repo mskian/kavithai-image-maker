@@ -129,6 +129,14 @@ app.post('/kavithai', csrfProtection, [
     }
 });
 
+app.get('/offline', csrfProtection, function(req, res) {
+    res.header('X-Frame-Options', 'DENY');
+    res.header('X-XSS-Protection', '1; mode=block');
+    res.header('X-Content-Type-Options', 'nosniff');
+    res.header('Strict-Transport-Security', 'max-age=63072000');
+    res.render('offline');
+});
+
 app.use('/', function(req, res) {
     res.status(404)
     res.render('404', {

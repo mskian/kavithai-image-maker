@@ -68,8 +68,25 @@ function BacktoHome() {
         window.close();
     }, 3000)
 }
+
 if (window.history.replaceState) {
     window.history.replaceState(null, null, window.location.href);
+}
+
+document.addEventListener('DOMContentLoaded', init, false);
+function init() {
+    if ('serviceWorker' in navigator && navigator.onLine) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js')
+                .then(function(registration) {
+                    console.log('PWA service worker ready with Offline Page');
+                    registration.update();
+                })
+                .catch(function(error) {
+                    console.log('Registration failed with ' + error);
+                });
+        });
+    }
 }
 </script>
 

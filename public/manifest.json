@@ -42,7 +42,7 @@
 	],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "orientation": "any",
+    "orientation": "portrait",
     "start_url": "/",
     "display": "standalone"
 }
