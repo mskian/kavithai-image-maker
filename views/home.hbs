@@ -54,7 +54,38 @@
 <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link href="/css/custom.css" rel="stylesheet" />
 
+<script type="application/ld+json">
+    {
+    	"@context": "https://schema.org",
+    	"@type": "WebSite",
+    	"publisher": {
+    		"@type": "Organization",
+    		"name": "{{post.title}}",
+    		"url": "{{post.seo_url}}",
+    		"logo": {
+    			"@type": "ImageObject",
+    			"url": "{{ post.logo }}",
+    			"width": 72,
+    			"height": 72
+    		}
+    	},
+    	"url": "{{post.seo_url}}",
+    	"image": {
+    		"@type": "ImageObject",
+    		"url": "{{ post.og_image }}",
+    		"width": 1200,
+    		"height": 630
+    	},
+    	"mainEntityOfPage": {
+    		"@type": "WebPage",
+    		"@id": "{{post.seo_url}}"
+    	},
+    	"description": "{{post.description}}"
+    }
+</script>
+
 <link rel="manifest" href="/manifest.json">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
 
 <link rel="preconnect" href="https://{{post.data_domain}}">
 <script async defer src="{{post.src_data}}" data-website-id="{{post.website_id}}" data-domains="{{post.data_domain}}"></script>

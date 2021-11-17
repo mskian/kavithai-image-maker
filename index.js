@@ -58,6 +58,7 @@ app.get('/', csrfProtection, function(req, res) {
             twitter: '@tamilsmsblog',
             twitteruser: '@tamilsmsblog',
             og_image: current_page + 'kavithai-maker.png',
+            logo: current_page + 'icons/Icon-72.png',
             src_data: process.env.SRC,
             website_id: process.env.WEBSITEID,
             data_domain: process.env.DOMAIN,
