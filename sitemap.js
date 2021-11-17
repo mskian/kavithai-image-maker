@@ -12,7 +12,7 @@ const date = mm + '-' + dd + '-' + yyyy;
 
 async function run() {
     const urls = [{
-        url: '/1',
+        url: '/',
         lastMod: date,
         changeFreq: 'daily'
     }]
