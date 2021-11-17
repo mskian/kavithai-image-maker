@@ -6,9 +6,10 @@
   "scripts": {
     "test": "node test.js",
     "start": "node index.js",
-    "build": "node sitemap.js && node robots.js",
+    "build": "node sitemap.js && node robots.js && node pwa.js",
     "dev": "nodemon index.js",
-    "ci": "mocha ./test/* --exit"
+    "ci": "mocha ./test/* --exit",
+    "pwa:build": "node pwa.js"
   },
   "repository": {
     "type": "git",
