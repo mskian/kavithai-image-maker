@@ -4,6 +4,11 @@ require('dotenv').config();
 
 robotstxt({
         policy: [{
+               userAgent: "*",
+               disallow: "/image",
+            },
+            
+            {
                 userAgent: "NinjaBot",
                 allow: "/",
             },

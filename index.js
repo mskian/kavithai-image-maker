@@ -77,6 +77,7 @@ app.post('/kavithai', csrfProtection, [
     res.header('X-XSS-Protection', '1; mode=block');
     res.header('X-Content-Type-Options', 'nosniff');
     res.header('Strict-Transport-Security', 'max-age=63072000');
+    res.header('X-Robots-Tag', 'noindex, nofollow');
 
     const errors = validationResult(req);
 
@@ -129,11 +130,27 @@ app.post('/kavithai', csrfProtection, [
     }
 });
 
+app.get('/image', csrfProtection, function(req, res) {
+    res.header('X-Frame-Options', 'DENY');
+    res.header('X-XSS-Protection', '1; mode=block');
+    res.header('X-Content-Type-Options', 'nosniff');
+    res.header('Strict-Transport-Security', 'max-age=63072000');
+    res.header('X-Robots-Tag', 'noindex, nofollow');
+
+    res.render('image', {
+        post: {
+            title: 'Download your Tamil Kavithai image',
+            description: 'Tamil Kavithai image Maker - Just add your Tamil Kavithai it will Generate the image with the text you add - Free kavithai Maker.',
+        }
+    });
+});
+
 app.get('/offline', csrfProtection, function(req, res) {
     res.header('X-Frame-Options', 'DENY');
     res.header('X-XSS-Protection', '1; mode=block');
     res.header('X-Content-Type-Options', 'nosniff');
     res.header('Strict-Transport-Security', 'max-age=63072000');
+    res.header('X-Robots-Tag', 'noindex, nofollow');
     res.render('offline');
 });
 

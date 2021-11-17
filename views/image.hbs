@@ -24,9 +24,8 @@
 <link rel="apple-touch-icon" sizes="256x256" href="/icons/Icon-256.png">
 <link rel="apple-touch-icon" sizes="512x512" href="/icons/Icon-512.png">
 
-<title>{{post.name}}</title>
+<title>{{post.title}}</title>
 <meta name="description" content="{{post.description}}" />
-<link rel="canonical" href="{{post.seo_url}}" />
 
 <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" integrity="sha512-IgmDkwzs96t4SrChW29No3NXBIBv8baW490zk5aXvhCD8vuZM3yUSkbyTBcXohkySecyzIrUwiF/qV0cuPcL3Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -44,50 +43,18 @@
 <div class="columns is-centered">
 <div class="column is-half">
 <div class="card-content content">
-<P>
-<img src="data:image/jpeg;base64,{{post.base}}" class="img-fluid mx-auto d-block" alt="Happy Diwali 2021" width="650" height="650" loading="lazy" />
-</P>
-<p>
-<a onclick="BacktoHome();" href="data:image/jpeg;base64,{{post.base}}" class="button pwa-button is-warning has-text-dark" download="{{post.title}}.jpeg">🔽 Download image</a>
-</p>
-<hr>
-<p class="has-text-light">
-we ❤ Open Source - <a target="_blank" rel="nofollow noreferrer noopener" href="https://github.com/mskian/kavithai-image-maker" title="kavithai image maker" >Source Code</a><br>
-This Project Was Developed and Maintained by the Team tamilsms.blog<br>
-it's Fully Free to use - Zero Ads and Zero Promotions.
-</p>
-<hr>
+<blockquote class="notification is-danger">
+<P>This Window will Closed in 3 secs.</P>
+</blockquote>
 </div>
 </div>
 </div>
 </div>
 
 <script>
-function BacktoHome() {
-    setTimeout(() => {
-        window.close();
-    }, 3000)
-}
-
-if (window.history.replaceState) {
-    window.history.replaceState(null, null, '/image');
-}
-
-document.addEventListener('DOMContentLoaded', init, false);
-function init() {
-    if ('serviceWorker' in navigator && navigator.onLine) {
-        window.addEventListener('load', function() {
-            navigator.serviceWorker.register('/sw.js')
-                .then(function(registration) {
-                    console.log('PWA service worker ready with Offline Page');
-                    registration.update();
-                })
-                .catch(function(error) {
-                    console.log('Registration failed with ' + error);
-                });
-        });
-    }
-}
+setTimeout(() => {
+    window.close();
+}, 3000)
 </script>
 
 </body>
