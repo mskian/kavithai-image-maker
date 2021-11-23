@@ -24,7 +24,7 @@ it's Fully Free to use - Zero Ads and Zero Promotions.
 - DOMPurify - sanitizer for HTML
 - Bulma CSS Framework  
 
-## Developent 📦
+## Development 📦
 
 - Download or Clone the Repo
 
