@@ -69,9 +69,9 @@ app.get('/', csrfProtection, function(req, res) {
 });
 
 app.post('/kavithai', csrfProtection, [
-    check('kavithai', 'Kavithai Length Must be 50 to 230 characters').isLength({
-        min: 50,
-        max: 230
+    check('kavithai', 'Kavithai Length Must be 25 to 250 characters').isLength({
+        min: 25,
+        max: 250
     }).not().isEmpty(),
 ], async function(req, res) {
     res.header('X-Frame-Options', 'DENY');
