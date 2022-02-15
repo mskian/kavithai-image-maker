@@ -1709,10 +1709,10 @@ node-fetch@2.6.7:
   dependencies:
     whatwg-url "^5.0.0"
 
-node-html-to-image@^3.2.3:
-  version "3.2.3"
-  resolved "https://registry.yarnpkg.com/node-html-to-image/-/node-html-to-image-3.2.3.tgz#145f79778e47f2c4c87db805450df53a42be5afb"
-  integrity sha512-1FZdV9zvjErWInR5oe7U/9BE5svwL4hnq2uwsUA63pAGf1e5rmzNDRzT3N+uoLVg6oRE0+kgqpPY0+MjxhMldg==
+node-html-to-image@^3.2.4:
+  version "3.2.4"
+  resolved "https://registry.yarnpkg.com/node-html-to-image/-/node-html-to-image-3.2.4.tgz#51b0c6b01f6bcf8c87ab052a067e959926e4397b"
+  integrity sha512-5ittk3okJzYqGyctgIzCw20XeUGWe5ai4n0ngYd8NRLKvCrzEujX0zmwZYakxrgCZLMgPfOg3w/3XxUwPVSDlw==
   dependencies:
     handlebars "^4.5.3"
     puppeteer "^13.1.1"
