@@ -36,7 +36,7 @@
     "dompurify": "^2.3.6",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
-    "express-sitemap-xml": "^3.0.0",
+    "express-sitemap-xml": "^3.0.1",
     "express-validator": "^6.14.0",
     "hbs": "^4.2.0",
     "jsdom": "^19.0.0",
