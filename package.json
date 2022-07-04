@@ -46,6 +46,6 @@
     "generate-robotstxt": "^8.0.3",
     "mocha": "^10.0.0",
     "nodemon": "^2.0.18",
-    "supertest": "^6.2.3"
+    "supertest": "^6.2.4"
   }
 }
