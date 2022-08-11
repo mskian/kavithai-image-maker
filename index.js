@@ -39,7 +39,7 @@ function random_item(items) {
     return items[Math.floor(Math.random() * items.length)];
 
 }
-const items = ['#E9D5FF', '#FEF08A', '#BBF7D0'];
+const items = ['#E9D5FF', '#FEF08A', '#BBF7D0', '#DFE6E9'];
 
 app.get('/', csrfProtection, function(req, res) {
     res.header('X-Frame-Options', 'DENY');
