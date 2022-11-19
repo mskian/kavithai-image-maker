@@ -146,6 +146,34 @@ app.get('/image', csrfProtection, function(req, res) {
     });
 });
 
+app.post('/generate', async function(req, res) {
+    res.header('X-Frame-Options', 'DENY');
+    res.header('X-XSS-Protection', '1; mode=block');
+    res.header('X-Content-Type-Options', 'nosniff');
+    res.header('Strict-Transport-Security', 'max-age=63072000');
+    res.header('X-Robots-Tag', 'noindex, nofollow');
+
+    const get_kavithai = DOMPurify.sanitize(req.body.kavithai) || "Your Kavithai Content";
+
+        const image = await nodeHtmlToImage({
+            content: {
+                content: get_kavithai
+            },
+            puppeteerArgs: {
+                args: ["--no-sandbox"]
+   
+            },
+            type: 'jpeg',
+            quality: 70,
+            html: `<html><head><link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;500;600;700&display=swap" rel="stylesheet"> <style>body{width: 1080px; height: 1080px; background-color: ${random_item(items)}; font-family: 'Baloo Thambi 2', cursive; font-weight: 700;}p{color: #222222; font-size: 36px; font-family: 'Baloo Thambi 2', cursive; font-weight: 700; line-height: 1.7; text-align: left; white-space: pre-wrap;}.container{height: 96%; width: 100%; display: flex; position: fixed; align-items: center; justify-content: center;}#footer{position:absolute; bottom:0; width:100%; height: 60px; text-align: center; align-items: center; justify-content: center; color: #222222; font-size: 35px; font-family: 'Baloo Thambi 2', cursive; font-weight: 700; line-height: 1.6;}</style> </head> <body> <div class="container"> <p class="card">{{content}}</p></div><br></body></html>`
+        })
+        res.set({
+          'Content-Type': 'image/jpeg'
+         });
+        res.send(image);
+    }
+);
+
 app.get('/offline', csrfProtection, function(req, res) {
     res.header('X-Frame-Options', 'DENY');
     res.header('X-XSS-Protection', '1; mode=block');
