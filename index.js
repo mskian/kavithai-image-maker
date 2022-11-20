@@ -174,6 +174,36 @@ app.post('/generate', async function(req, res) {
     }
 );
 
+app.post('/quotes', async function(req, res) {
+    res.header('X-Frame-Options', 'DENY');
+    res.header('X-XSS-Protection', '1; mode=block');
+    res.header('X-Content-Type-Options', 'nosniff');
+    res.header('Strict-Transport-Security', 'max-age=63072000');
+    res.header('X-Robots-Tag', 'noindex, nofollow');
+
+    const get_quotes = DOMPurify.sanitize(req.body.quotes) || "Your Quotes Content";
+    const get_author = DOMPurify.sanitize(req.body.author) || "San Quotes";
+
+        const image = await nodeHtmlToImage({
+            content: {
+                content: get_quotes,
+                author: get_author
+            },
+            puppeteerArgs: {
+                args: ["--no-sandbox"]
+   
+            },
+            type: 'jpeg',
+            quality: 70,
+            html: `<html><head><link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700&display=swap" rel="stylesheet"> <style>body{width: 1080px; height: 1080px; background-color: #A0522D; font-family: 'Mukta', sans-serif; font-weight: 700;}p{color: #ECF0F1; font-size: 38px; font-family: 'Mukta', sans-serif; font-weight: 700; line-height: 1.6; text-align: center; white-space: initial; word-wrap: break-word}.container{height: 91%; width: 68%; margin-right: auto; margin-left: auto; display: flex; align-items: center; justify-content: center;}#footer{position:absolute; bottom:0; width:95%; height: 70px; text-align: center; align-items: center; justify-content: center; color: #ECF0F1; font-size: 35px; font-family: 'Mukta', sans-serif; font-weight: 700; line-height: 1.6;}</style> </head> <body> <div class="container"> <p class="card">{{content}}</p></div><div id="footer">{{author}}</div><br></body></html>`
+        })
+        res.set({
+          'Content-Type': 'image/jpeg'
+         });
+        res.send(image);
+    }
+);
+
 app.get('/offline', csrfProtection, function(req, res) {
     res.header('X-Frame-Options', 'DENY');
     res.header('X-XSS-Protection', '1; mode=block');
