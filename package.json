@@ -10,7 +10,7 @@
     "test": "node test.js",
     "start": "node index.js",
     "build": "node sitemap.js && node robots.js && node pwa.js",
-    "dev": "nodemon index.js",
+    "dev": "nodemon index.js --ext '*'",
     "ci": "mocha ./test/* --exit",
     "pwa:build": "node pwa.js"
   },
