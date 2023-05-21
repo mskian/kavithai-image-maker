@@ -65,6 +65,15 @@ http://localhost:3001/kavithai
 - line break <https://github.com/frinyvonnick/node-html-to-image/issues/134>
 - Heroku puppeteer - <https://elements.heroku.com/buildpacks/jontewks/puppeteer-heroku-buildpack>
 - Heroku Emoji Support - <https://github.com/SimonBriche/heroku-buildpack-emoji-support>
+- Sample `.env`
+
+```sh
+SRC=
+WEBSITEID=
+DOMAIN=
+URL=
+GOOGLE=
+```
 
 ## LICENSE ☑
 
