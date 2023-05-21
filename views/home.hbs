@@ -115,6 +115,12 @@
 <p id="charNum">250 characters remaining</p>
 </div>
 </p>
+<p class="field">
+<div class="control">
+<label class="label has-text-centered has-text-weight-medium" for="Description">Author Name (Default: #tamilsms)</label>
+<input type="text" class="input is-info column is-half input-box" name="author" id="author" placeholder="Author Name" autocomplete="off" maxlength="36">
+</div>
+</p>
 <input type="hidden" name="_csrf" value="{{ post.csrfToken }}">
 <div class="control">
 <button onclick="store()" class="button is-success sign-button">▶ Create image</button>
