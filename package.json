@@ -2,7 +2,10 @@
   "name": "kavithai-image-maker",
   "version": "0.0.1",
   "description": "Convert HTML to image with fully Designed for Tamil kavithai image.",
+  "private": true,
   "main": "index.js",
+  "author": "Santhosh Veer",
+  "license": "MIT",
   "scripts": {
     "test": "node test.js",
     "start": "node index.js",
@@ -24,8 +27,6 @@
     "html",
     "api"
   ],
-  "author": "Santhosh Veer",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/mskian/kavithai-image-maker/issues"
   },
