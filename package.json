@@ -40,7 +40,7 @@
     "express-sitemap-xml": "^3.0.1",
     "express-validator": "^7.0.1",
     "hbs": "^4.2.0",
-    "jsdom": "^23.0.1",
+    "jsdom": "^23.2.0",
     "node-html-to-image": "^4.0.0"
   },
   "devDependencies": {
