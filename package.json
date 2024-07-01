@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "generate-robotstxt": "^8.0.3",
-    "mocha": "^10.5.1",
+    "mocha": "^10.5.2",
     "nodemon": "^3.1.4",
     "supertest": "^7.0.0"
   }
