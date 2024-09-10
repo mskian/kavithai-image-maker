@@ -36,7 +36,7 @@
     "csurf": "^1.11.0",
     "dompurify": "^3.1.6",
     "dotenv": "^16.4.5",
-    "express": "^4.19.2",
+    "express": "^4.20.0",
     "express-sitemap-xml": "^3.1.0",
     "express-validator": "^7.2.0",
     "hbs": "^4.2.0",
