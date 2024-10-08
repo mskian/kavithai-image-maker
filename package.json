@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/mskian/kavithai-image-maker#readme",
   "dependencies": {
-    "cookie-parser": "^1.4.6",
+    "cookie-parser": "^1.4.7",
     "csurf": "^1.11.0",
     "dompurify": "^3.1.7",
     "dotenv": "^16.4.5",
