@@ -41,7 +41,7 @@
     "express-validator": "^7.2.0",
     "hbs": "^4.2.0",
     "jsdom": "^25.0.1",
-    "node-html-to-image": "^4.0.0"
+    "node-html-to-image": "^5.0.0"
   },
   "devDependencies": {
     "generate-robotstxt": "^8.0.3",
